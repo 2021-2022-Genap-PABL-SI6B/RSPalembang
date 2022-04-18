@@ -4,11 +4,13 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.ProgressBar;
 import android.widget.Toast;
 
+import com.google.android.material.floatingactionbutton.FloatingActionButton;
 import com.si6b.rspalembang.API.APIRequestData;
 import com.si6b.rspalembang.API.RetroServer;
 import com.si6b.rspalembang.Adapter.AdapterRumahSakit;
@@ -29,6 +31,7 @@ public class MainActivity extends AppCompatActivity {
     private RecyclerView.Adapter adRumahSakit;
     private RecyclerView.LayoutManager lmRumahSakit;
     private List<ModelRumahSakit> listRumahSakit = new ArrayList<>();
+    private FloatingActionButton fabTambahData;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -37,9 +40,17 @@ public class MainActivity extends AppCompatActivity {
 
         rvRumahSakit = findViewById(R.id.rv_rumah_sakit);
         pbRumahSakit = findViewById(R.id.pb_rumah_sakit);
+        fabTambahData = findViewById(R.id.fab_tambah_data);
 
         lmRumahSakit = new LinearLayoutManager(this, LinearLayoutManager.VERTICAL, false);
         rvRumahSakit.setLayoutManager(lmRumahSakit);
+
+        fabTambahData.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                startActivity(new Intent(MainActivity.this, TambahActivity.class));
+            }
+        });
     }
 
     @Override
