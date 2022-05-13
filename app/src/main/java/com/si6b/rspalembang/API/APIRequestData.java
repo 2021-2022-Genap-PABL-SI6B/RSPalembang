@@ -25,4 +25,14 @@ public interface APIRequestData {
     Call<ModelResponse> ardDelete(
             @Field("id") int id
     );
+
+    @FormUrlEncoded
+    @POST("update.php")
+    Call<ModelResponse> ardUpdate(
+            @Field("id") int id,
+            @Field("nama") String nama,
+            @Field("alamat") String alamat,
+            @Field("telepon") String telepon
+    );
+
 }
