@@ -4,68 +4,52 @@
     android:layout_height="wrap_content"
     android:layout_margin="6dp">
 
-    <RelativeLayout
+    <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:orientation="vertical"
         android:layout_margin="6dp"
         >
 
-        <ImageView
-            android:id="@+id/iv_rumah_sakit"
-            android:layout_width="100dp"
-            android:layout_height="100dp"
-            android:scaleType="centerCrop"
-            android:src="@mipmap/ic_launcher" />
-
-        <LinearLayout
+        <TextView
+            android:id="@+id/tv_id"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:orientation="vertical"
-            android:layout_toRightOf="@id/iv_rumah_sakit"
-            android:layout_marginLeft="6dp"
-            >
+            android:text="ID Rumah Sakit"
+            android:textSize="21sp"
+            android:textStyle="bold"
+            android:visibility="gone"
+            />
 
-            <TextView
-                android:id="@+id/tv_id"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="ID Rumah Sakit"
-                android:textSize="21sp"
-                android:textStyle="bold"
-                android:visibility="gone"
-                />
+        <TextView
+            android:id="@+id/tv_nama"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Nama Rumah Sakit"
+            android:textSize="21sp"
+            android:textStyle="bold"
+            />
 
-            <TextView
-                android:id="@+id/tv_nama"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="Nama Rumah Sakit"
-                android:textSize="21sp"
-                android:textStyle="bold"
-                />
+        <TextView
+            android:id="@+id/tv_alamat"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Alamat Rumah Sakit"
+            android:textSize="17sp"
+            android:maxLines="2"
+            android:ellipsize="end"
+            />
 
-            <TextView
-                android:id="@+id/tv_alamat"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="Alamat Rumah Sakit"
-                android:textSize="17sp"
-                android:maxLines="2"
-                android:ellipsize="end"
-                />
+        <TextView
+            android:id="@+id/tv_telepon"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Telepon Rumah Sakit"
+            android:textSize="17sp"
+            android:maxLines="1"
+            android:ellipsize="end"
+            />
 
-            <TextView
-                android:id="@+id/tv_telepon"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="Telepon Rumah Sakit"
-                android:textSize="17sp"
-                android:maxLines="1"
-                android:ellipsize="end"
-                />
-
-        </LinearLayout>
-
-    </RelativeLayout>
+    </LinearLayout>
 
 </androidx.cardview.widget.CardView>

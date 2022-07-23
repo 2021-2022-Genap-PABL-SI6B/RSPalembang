@@ -55,11 +55,7 @@ public class AdapterRumahSakit extends RecyclerView.Adapter<AdapterRumahSakit.Ho
         holder.tvNama.setText(MRS.getNama());
         holder.tvAlamat.setText(MRS.getAlamat());
         holder.tvTelepon.setText(MRS.getTelepon());
-        Glide.with(ctx)
-                .load(MRS.getFoto())
-                .centerCrop()
-                .placeholder(R.mipmap.ic_launcher)
-                .into(holder.ivRumahSakit);
+
     }
 
     @Override
@@ -78,7 +74,6 @@ public class AdapterRumahSakit extends RecyclerView.Adapter<AdapterRumahSakit.Ho
             tvNama = itemView.findViewById(R.id.tv_nama);
             tvAlamat = itemView.findViewById(R.id.tv_alamat);
             tvTelepon = itemView.findViewById(R.id.tv_telepon);
-            ivRumahSakit = itemView.findViewById(R.id.iv_rumah_sakit);
 
             itemView.setOnLongClickListener(new View.OnLongClickListener() {
                 @Override

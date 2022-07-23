@@ -19,8 +19,4 @@ public class ModelRumahSakit {
     public String getTelepon() {
         return telepon;
     }
-
-    public String getFoto() {
-        return foto;
-    }
 }
